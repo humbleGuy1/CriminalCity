@@ -1,9 +1,9 @@
-using CodeBase.Input;
+﻿using CodeBase.Input;
 using UnityEngine;
 
-namespace CodeBase.Player
+namespace CodeBase.Player.Movement
 {
-    public class PlayerMover : MonoBehaviour
+    public class PlayerMover : MonoBehaviour, IDisabled
     {
         [SerializeField] private PlayerInput _playerInput;
         [SerializeField] private CharacterController _characterController;
@@ -11,6 +11,21 @@ namespace CodeBase.Player
         [SerializeField] private Camera _camera;
 
         private void Update()
+        {
+            Move();
+        }
+
+        public void Disable()
+        {
+            enabled = false;
+        }
+
+        public void Enable()
+        {
+            enabled = true;
+        }
+
+        private void Move()
         {
             Vector3 movementVector = Vector3.zero;
 
