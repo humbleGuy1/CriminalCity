@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9c917133d276d44acb0d0022f0a130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _heatlhValue: 100
   _playerInput: {fileID: 7789758971147820948}
   _playerMover: {fileID: 1996009071940277485}
   _playerAnimator: {fileID: 4544920322715365992}
