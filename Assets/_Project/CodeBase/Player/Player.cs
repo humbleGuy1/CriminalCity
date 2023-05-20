@@ -1,6 +1,5 @@
 ﻿using CodeBase.Input;
 using CodeBase.Player.Animation;
-using CodeBase.Player.Health;
 using CodeBase.Player.Movement;
 using UnityEngine;
 

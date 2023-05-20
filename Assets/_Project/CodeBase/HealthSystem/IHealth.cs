@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CodeBase.Player.Health
+namespace CodeBase.HealthSystem
 {
     public interface IHealth
     {

@@ -1,39 +1,14 @@
-﻿using System;
+﻿using CodeBase.HealthSystem;
 
-namespace CodeBase.Player.Health
+namespace CodeBase.Player
 {
-    public class PlayerHealth : IHealth
+    public class PlayerHealth : Health
     {
-        private int _healthValue;
+        public PlayerHealth(int healthValue) : base(healthValue) => _healthValue = healthValue;
 
-        public int HealthValue
+        public override void TakeDamage(int damage)
         {
-            get { return _healthValue; }
-
-            private set 
-            {
-                if(value <= 0)
-                {
-                    _healthValue = 0;
-                    ReachedZero?.Invoke();
-                }
-                else
-                {
-                    _healthValue = value;
-                }
-            }
-        }
-           
-        public event Action ReachedZero;
-
-        public PlayerHealth(int healthValue)
-        {
-            _healthValue = healthValue;
-        }
-
-        public void TakeDamage(int damage)
-        {
-            HealthValue -= damage;
+            base.TakeDamage(damage);
         }
     }
 }
