@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Player
+﻿namespace CodeBase
 {
     public interface IDisabled
     {

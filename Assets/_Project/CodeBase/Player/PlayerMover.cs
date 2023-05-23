@@ -5,25 +5,17 @@ namespace CodeBase.Player.Movement
 {
     public class PlayerMover : MonoBehaviour, IDisabled
     {
+        [SerializeField] private float _movementSpeed;
+        [Space]
         [SerializeField] private PlayerInput _playerInput;
         [SerializeField] private CharacterController _characterController;
-        [SerializeField] private float _movementSpeed;
         [SerializeField] private Camera _camera;
 
-        private void Update()
-        {
-            Move();
-        }
+        private void Update() => Move();
 
-        public void Disable()
-        {
-            enabled = false;
-        }
+        public void Disable() => enabled = false;
 
-        public void Enable()
-        {
-            enabled = true;
-        }
+        public void Enable() => enabled = true;
 
         private void Move()
         {

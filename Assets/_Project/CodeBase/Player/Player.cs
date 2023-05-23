@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace CodeBase.Player
 {
+    [SelectionBase]
     public class Player : MonoBehaviour
     {
         [SerializeField, Range(0, 100)] private int _startHealthValue;
@@ -35,9 +36,42 @@ namespace CodeBase.Player
             _playerHealth.ReachedZero -= Die;
         }
 
+        public void UseWeapon(IWeapon currentWeapon)
+        {
+            //currentWeapon.Attack();
+        }
+
         private void Die()
         {
             print("Die");
+        }
+    }
+
+    public interface IWeapon
+    {
+
+    }
+
+    public interface IMeleeWeapon : IWeapon
+    {
+
+    }
+
+    public interface IFireWeapon : IWeapon
+    {
+        public void Shoot();
+    }
+
+    public abstract class Weapon : IWeapon
+    {
+
+    }
+
+    public class Pistol : IFireWeapon
+    {
+        public void Shoot()
+        {
+          
         }
     }
 }

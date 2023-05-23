@@ -64991,11 +64991,6 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1384209540}
-    - target: {fileID: 7134262404721249614, guid: 4b275e23aab0a7d4fac698c200be4db3,
-        type: 3}
-      propertyPath: _startHealthValue
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 7716875455773014522, guid: 4b275e23aab0a7d4fac698c200be4db3,
         type: 3}
       propertyPath: m_RootOrder
